@@ -1,0 +1,29 @@
+html, body
+{
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+}
+
+.airplanes-list-view
+{
+  border-right: solid 1px #000;
+  float: left;
+  height: 100%;
+  margin-right: 20px;
+  width: 20%;
+}
+
+.airplanes-list-view ul,
+.airplanes-list-view ul li
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.airplane-detail-view .airplane-image
+{
+  width: 300px;
+}

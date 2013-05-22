@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Wright</title>
+    <meta name="viewport" content="user-scalable=0, initial-scale=1.0">
+    <meta name="author" content="Paul M. Watson (paul.watson@storyful.com)">
+    <link rel="stylesheet" href="/app/css/main.css">
+
+  </head>
+
+  <body>
+
+    <section class="airplanes-list-view">
+      <head>
+        <h1>Airplanes</h1>
+      </head>
+      <ul class="airplanes-list">
+      </ul>
+    </section>
+
+    <section class="airplane-detail-view">
+      <head>
+        <h1 class="airplane-name">Loading...</h1>
+      </head>
+      <img class="airplane-image" src="">
+      <p class="airplane-desc">
+        Loading....
+      </p>
+    </section>
+
+    <script src="components/requirejs/require.js"></script>
+    <script>
+      require.config({urlArgs: "bust=" + (new Date()).getTime()});
+      require(
+        [
+          'components/jquery/jquery',
+          'components/es5-shim/es5-shim',
+          'components/es5-shim/es5-sham',
+          'components/flight/lib/compose',
+          'components/flight/lib/registry',
+          'components/flight/lib/advice',
+          'components/flight/lib/logger',
+          'components/flight/tools/debug/debug'
+        ],
+
+        function(jquery, es5_shim, es5_sham, compose, registry, advice, withLogging, debug, timeago, mixpanel) {
+          debug.enable(true);
+          compose.mixin(registry, [advice.withAdvice, withLogging]);
+
+          require(['app/boot/page'], function(initialize) {
+            initialize();
+          });
+        }
+      );
+
+    </script>
+
+  </body>
+
+</html>

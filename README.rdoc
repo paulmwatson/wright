@@ -1,0 +1,45 @@
+== README
+
+This is the simple Wright app created for a lightning talk about Twitter Flight
+for @RubyIreland on the 21st of May, 2013 by Paul M. Watson <paul.watson@storyful.com>
+
+== Talk Notes
+
+# event driven
+
+# store data in DOM
+
+# communicate between components via events
+
+# components root, multiple components
+
+# mixins
+
+# advice mixin for pre, post and "around" component hooks
+
+-----------
+
+# new rails app
+
+# normal rails models/controllers with JSON responses
+
+# bower install in public folder
+## flight
+## mustache
+## requirejs
+
+# public/app.html
+
+# public/app/boot/page.js
+
+# separate js and css class hooks, ugly but practical
+
+# naming flight events painful
+
+# need a good build chain for app.html
+
+# infinite loops
+
+# duplicate events
+
+# cascading events
